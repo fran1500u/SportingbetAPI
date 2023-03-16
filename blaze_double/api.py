@@ -2,13 +2,15 @@ import requests
 import json
 import blaze_double as g
 import telebot
+import time 
 
 
 class bot:
     def __init__(self):
         self.name = 'Blaze Double'
-        self.token_bot = 'TOKEN DO BOT'
-        self.user_id = 'CHAT ID'
+        self.token_bot =
+'6275380416:AAFFbIx3-_kYmgRD6QWj3wuW6FyYHN_aWqk'
+        self.user_id = '-1001669264980'
         self.link = 'http://api.mxvinvest.com:63000/blaze-double'
         self.result = None
         self.now = None
@@ -37,6 +39,7 @@ class bot:
         url = requests.get(self.link)
         data = json.loads(url.content)
         results = data["results"]
+        print(results)
         return results
 
     def rum(self):
